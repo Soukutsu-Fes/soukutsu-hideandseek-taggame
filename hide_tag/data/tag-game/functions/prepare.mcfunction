@@ -29,5 +29,8 @@ say 最初の鬼は @a[tag=TAG_hunter]
 #逃走者にタグを付与
 tag @a[tag=!TAG_hunter,gamemode=adventure] add TAG_escape
 
+team join TAG_game @a[tag=TAG_hunter]
+team join TAG_game @a[tag=TAG_escape]
+
 #tick1処理開始
 function tag-game:game/tick1

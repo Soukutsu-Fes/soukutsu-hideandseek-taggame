@@ -9,15 +9,16 @@ execute as @a[limit=1,tag=TAG_P_Timer] run scoreboard players remove 開始ま�
 execute as @a[limit=1,tag=TAG_E_Timer,tag=!TAG_P_Timer] run scoreboard players remove 残り時間（秒） soukutsu_taggame 1
 
 #音系
-execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 300 run playsound minecraft:block.vine.step block @a ~ ~ ~
-execute as @a[limit=1,tag=TAG_P_Timer] run playsound minecraft:entity.experience_orb.pickup ambient @a ~ ~ ~
-execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 10 run playsound minecraft:entity.experience_orb.pickup ambient @a ~ ~ ~
-execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 9 run playsound minecraft:entity.experience_orb.pickup ambient @a ~ ~ ~
-execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 8 run playsound minecraft:entity.experience_orb.pickup ambient @a ~ ~ ~
-execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 7 run playsound minecraft:entity.experience_orb.pickup ambient @a ~ ~ ~
-execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 6 run playsound minecraft:entity.experience_orb.pickup ambient @a ~ ~ ~
-execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 5 run playsound minecraft:entity.experience_orb.pickup ambient @a ~ ~ ~
-execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 4 run playsound minecraft:entity.experience_orb.pickup ambient @a ~ ~ ~
-execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 3 run playsound minecraft:entity.experience_orb.pickup ambient @a ~ ~ ~
-execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 2 run playsound minecraft:entity.experience_orb.pickup ambient @a ~ ~ ~
-execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 1 run playsound minecraft:entity.experience_orb.pickup ambient @a ~ ~ ~
+execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 300 as @a run playsound minecraft:block.vine.step block @s ~ ~ ~
+execute as @a[limit=1,tag=TAG_P_Timer] run execute as @a[tag=HS_hunter] at @s run playsound minecraft:entity.experience_orb.pickup ambient @a ~ ~ ~
+execute as @a[limit=1,tag=TAG_P_Timer] run execute as @a at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~
+execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 10 run execute as @a[tag=HS_hunter] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~
+execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 9 run execute as @a[tag=HS_hunter] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~
+execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 8 run execute as @a[tag=HS_hunter] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~
+execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 7 run execute as @a[tag=HS_hunter] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~
+execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 6 run execute as @a[tag=HS_hunter] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~
+execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 5 run execute as @a[tag=HS_hunter] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~
+execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 4 run execute as @a[tag=HS_hunter] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~
+execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 3 run execute as @a[tag=HS_hunter] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~
+execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 2 run execute as @a[tag=HS_hunter] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~
+execute as @a[tag=TAG_admin] if score 残り時間（秒） soukutsu_taggame matches 1 run execute as @a[tag=HS_hunter] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~

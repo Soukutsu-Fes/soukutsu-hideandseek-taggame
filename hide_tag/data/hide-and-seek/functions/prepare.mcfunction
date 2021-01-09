@@ -21,7 +21,7 @@ team modify HS_hunter nametagVisibility hideForOtherTeams
 team modify HS_escape nametagVisibility hideForOtherTeams
 
 #鬼を抽選し、スコアボードにタッチ人数欄を追加・見分けやすいように旗を装着
-execute unless entity @a[tag=HS_hunter] run tag @r[limit=1] add HS_hunter
+execute unless entity @a[tag=HS_hunter,gamemode=adventure] run tag @r[limit=1] add HS_hunter
 scoreboard players set @a[tag=HS_hunter] soukutsu_hide 0
 replaceitem entity @a[tag=HS_hunter] armor.head minecraft:red_banner
 tag @a[tag=HS_hunter] add HS_taiki

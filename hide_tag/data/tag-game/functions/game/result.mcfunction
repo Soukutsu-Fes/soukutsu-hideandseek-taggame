@@ -14,7 +14,7 @@ scoreboard players set 残り時間（秒） soukutsu_taggame -1
 #最終的な鬼の表示
 title @a title {"text":"終了！"}
 say 最後の鬼は@a[tag=TAG_hunter]
-playsound minecraft:block.bell.use ambient @a ~ ~ ~
+execute as @a at @s run playsound minecraft:block.bell.use ambient @a ~ ~ ~
 
 #タッチされた回数の表示
 scoreboard objectives setdisplay sidebar TAG_score

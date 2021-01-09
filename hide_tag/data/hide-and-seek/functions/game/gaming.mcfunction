@@ -12,3 +12,6 @@ effect give @a[tag=HS_hunter,tag=!HS_taiki] minecraft:speed 2 3 true
 effect give @a[tag=HS_taiki] minecraft:slowness 2 100 true
 effect give @a[tag=HS_taiki] minecraft:jump_boost 2 200 true
 effect give @a[tag=HS_taiki] minecraft:weakness 2 3 true
+
+#途中で入ってきた人をスペクテイターに
+execute if entity @a[tag=] run gamemode spectator @a[tag=] 
