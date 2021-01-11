@@ -107,11 +107,11 @@ For detailed rules and specifications, please refer to the following file.
 
 
 
-[TAG-rules.md]()
+[TAG-rules.md](TAG-rules.md)
 
-[HS-rules.md]()
+[HS-rules.md]([HS-rules.md)
 
-[specifications.md]()
+[specifications.md](specifications.md)
 
 
 
