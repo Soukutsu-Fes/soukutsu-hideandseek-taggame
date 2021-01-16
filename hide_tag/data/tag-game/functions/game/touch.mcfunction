@@ -11,6 +11,7 @@ tag @s[tag=TAG_shori1,tag=TAG_shori2] remove TAG_escape
 effect give @a[tag=TAG_shori1,tag=TAG_shori2] minecraft:weakness 10 3 true
 effect give @a[tag=TAG_shori1,tag=TAG_shori2] minecraft:slowness 10 100 true
 effect give @a[tag=TAG_shori1,tag=TAG_shori2] minecraft:jump_boost 10 200 true
+scoreboard players add @s[tag=TAG_shori1,tag=TAG_shori2] TAG_score 1
 
 #アナウンス
 execute if entity @a[tag=TAG_shori1,tag=TAG_shori2] run say @sが鬼になりました
