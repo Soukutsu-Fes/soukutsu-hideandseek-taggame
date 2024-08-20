@@ -1,6 +1,6 @@
 #準備タイマーの時間が0になったとき、鬼タイマーへ移行する
 execute if score 開始まで（秒） soukutsu_hide matches 0 run tag @a remove HS_P_Timer
-execute as @a[tag=HS_admin] if score 残り時間（秒） soukutsu_taggame matches 600 as @a run playsound minecraft:block.vine.step block @s ~ ~ ~
+# execute as @a[tag=HS_admin] if score 残り時間（秒） soukutsu_taggame matches 600 as @a run playsound minecraft:block.vine.step block @s ~ ~ ~
 
 #準備タイマーの減算処理
 execute as @a[limit=1,tag=HS_P_Timer] run scoreboard players remove 開始まで（秒） soukutsu_hide 1

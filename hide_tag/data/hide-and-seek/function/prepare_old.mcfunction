@@ -1,5 +1,4 @@
 #準備用コマンド
-# function hide-and-seek:prepare {interval_sec:60,time_sec:601,hunter:1}
 
 #コマンド実行者に識別タグ付与
 tag @s add HS_admin
@@ -8,8 +7,8 @@ tag @s add HS_admin
 scoreboard objectives add soukutsu_hide dummy "かくれんぼ"
 scoreboard objectives setdisplay sidebar soukutsu_hide
 scoreboard players set 残り人数 soukutsu_hide 0
-$scoreboard players set 開始まで（秒） soukutsu_hide $(interval_sec)
-$scoreboard players set 残り時間（秒） soukutsu_hide $(time_sec)
+scoreboard players set 開始まで（秒） soukutsu_hide 60
+scoreboard players set 残り時間（秒） soukutsu_hide 601
 
 #タッチ判定用のスコアボードを用意し、スコアを20に固定する
 scoreboard objectives add HS_touch health
@@ -22,7 +21,7 @@ team modify HS_hunter nametagVisibility hideForOtherTeams
 team modify HS_escape nametagVisibility hideForOtherTeams
 
 #鬼を抽選し、スコアボードにタッチ人数欄を追加・見分けやすいように旗を装着
-$execute unless entity @a[tag=HS_hunter,gamemode=adventure] run tag @r[limit=$(hunter)] add HS_hunter
+execute unless entity @a[tag=HS_hunter,gamemode=adventure] run tag @r[limit=1] add HS_hunter
 scoreboard players set @a[tag=HS_hunter] soukutsu_hide 0
 item replace entity @a[tag=HS_hunter] armor.head with red_banner
 tag @a[tag=HS_hunter] add HS_taiki

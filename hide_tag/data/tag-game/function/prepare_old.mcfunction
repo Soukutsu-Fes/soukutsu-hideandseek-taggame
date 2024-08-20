@@ -1,6 +1,4 @@
 #準備用コマンド
-# マクロを使って設定できるようになっている
-# function tag-game:prepare {time_sec:300,hunter:1}
 
 #コマンド実行者に識別タグ付与
 tag @s add TAG_admin
@@ -9,7 +7,7 @@ tag @s add TAG_admin
 scoreboard objectives add soukutsu_taggame dummy "鬼ごっこ"
 scoreboard objectives setdisplay sidebar soukutsu_taggame
 scoreboard players set 開始まで（秒） soukutsu_taggame 10
-$scoreboard players set 残り時間（秒） soukutsu_taggame $(time_sec)
+scoreboard players set 残り時間（秒） soukutsu_taggame 301
 
 #タッチ判定用のスコアボードを用意し、スコアを20に固定する
 scoreboard objectives add TAG_touch health "タッチ判定"
@@ -24,7 +22,7 @@ team add TAG_game "参加者"
 team modify TAG_game nametagVisibility hideForOwnTeam
 
 #初期鬼を抽選する
-$execute unless entity @a[tag=TAG_hunter] run tag @r[limit=$(hunter)] add TAG_hunter
+execute unless entity @a[tag=TAG_hunter] run tag @r[limit=1] add TAG_hunter
 tag @a[tag=TAG_hunter] add TAG_taiki
 say 最初の鬼は @a[tag=TAG_hunter]
 
